@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <script src="{% static 'script.js' %"></script>
 </head>
 <body>
     <marquee >Welcome</marquee>
+
+    <h1>O grande espirito de Natal</h1>
+    <h2>Hi {{home}}</h2>
+    <h3>idade: {{idade}}</h3>
+    {% if (idade > 18)}
+
+    <p>
+        Adulto
+    </p>
+    {% else %}
+    <p>
+        Criança
+    </p>
+    {% endif %}
+
+    <ul>
+        {% for atividade in atividade}
+    </ul>
+    <p>
+        Para mais do que 60 anos
+    </p>
+    <p>Vamos lá meu amigo JINGLE BELLS</p>
+
+    <img src="{% static 'papai/images.jpg'" alt="">
 </body>
 </html>
